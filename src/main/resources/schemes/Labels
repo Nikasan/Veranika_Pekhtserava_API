@@ -1,0 +1,56 @@
+[
+    {
+        "id": "5a27e3b69ae3d60b0c25525c",
+        "idBoard": "5a27e3b62fef5d3a74dca48a",
+        "name": "",
+        "color": "orange"
+    },
+    {
+        "id": "5a27e3b69ae3d60b0c25525e",
+        "idBoard": "5a27e3b62fef5d3a74dca48a",
+        "name": "",
+        "color": "red"
+    },
+    {
+        "id": "5a27e3b69ae3d60b0c255260",
+        "idBoard": "5a27e3b62fef5d3a74dca48a",
+        "name": "",
+        "color": "purple"
+    },
+    {
+        "id": "5a27e3b69ae3d60b0c25525f",
+        "idBoard": "5a27e3b62fef5d3a74dca48a",
+        "name": "",
+        "color": "yellow"
+    },
+    {
+        "id": "5a27e3b69ae3d60b0c25525d",
+        "idBoard": "5a27e3b62fef5d3a74dca48a",
+        "name": "",
+        "color": "green"
+    },
+    {
+        "id": "5a27e3b69ae3d60b0c255261",
+        "idBoard": "5a27e3b62fef5d3a74dca48a",
+        "name": "",
+        "color": "blue"
+    },
+    {
+        "id": "5c8d1bf6690d6343ce6011dc",
+        "idBoard": "5a27e3b62fef5d3a74dca48a",
+        "name": "green",
+        "color": "green"
+    },
+    {
+        "id": "5c8d1ca2b8214327e9411ae2",
+        "idBoard": "5a27e3b62fef5d3a74dca48a",
+        "name": "red",
+        "color": "red"
+    },
+    {
+        "id": "5c8d1d4d0b33484dab218627",
+        "idBoard": "5a27e3b62fef5d3a74dca48a",
+        "name": "green",
+        "color": "green"
+    }
+]

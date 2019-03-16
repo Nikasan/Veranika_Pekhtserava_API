@@ -1,5 +1,5 @@
 package core.trelloConstants;
 
 public enum RequestMethod {
-    GET, POST
+    GET, POST, DELETE, PUT
 }
