@@ -2,6 +2,7 @@ package core.trelloConstants;
 
 public class TrelloOptions {
 
+    //todo хорошо, что переменные отдельно, но, на будущее, такое лучше выносить в test.properties
     public static final String KEY = "3445103a21ddca2619eaceb0e833d0db";
     public static final String TOKEN = "a9b951262e529821308e7ecbc3e4b7cfb14a24fef5ea500a68c69d374009fcc0";
     public static final String TRELLO_API_BASE_URL = "https://trello.com/1";

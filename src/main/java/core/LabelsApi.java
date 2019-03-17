@@ -1,8 +1,17 @@
 package core;
 
+import static core.trelloConstants.TrelloOptions.Endpoints.GET_LABELS;
+import static core.trelloConstants.TrelloOptions.Endpoints.POST_LABEL;
+import static core.trelloConstants.TrelloOptions.Endpoints.UPDATE_LABEL;
+import static core.trelloConstants.TrelloOptions.Endpoints.UPDATE_LABEL_BY_ID;
+import static core.trelloConstants.TrelloOptions.Endpoints.UPDATE_LABEL_NAME;
+import static core.trelloConstants.TrelloOptions.KEY;
+import static core.trelloConstants.TrelloOptions.TOKEN;
+import static core.trelloConstants.TrelloOptions.TRELLO_API_BASE_URL;
+import static io.restassured.RestAssured.given;
+
 import beans.Label;
 import com.google.gson.Gson;
-
 import com.google.gson.reflect.TypeToken;
 import core.trelloConstants.RequestMethod;
 import io.restassured.RestAssured;
@@ -17,10 +26,6 @@ import org.apache.http.HttpStatus;
 
 import java.util.HashMap;
 import java.util.List;
-
-import static core.trelloConstants.TrelloOptions.*;
-import static core.trelloConstants.TrelloOptions.Endpoints.*;
-import static io.restassured.RestAssured.given;
 
 public class LabelsApi {
     private HashMap<String, String> queryParams = new HashMap<String, String>() {{
@@ -37,6 +42,7 @@ public class LabelsApi {
     }
 
     public static String addLabelEndpoint() {
+        //todo "%1$s/%2$s" выглядит, как константа
         String labelUrl = String.format(POST_LABEL);
         return String.format("%1$s/%2$s", TRELLO_API_BASE_URL, labelUrl);
     }
@@ -139,7 +145,7 @@ public class LabelsApi {
             return this;
         }
 
-
+//todo интересное решение. пока api простое - будет рабоать. на проектах побольше - лучше методы делать отдельные
         public Response callApi(String endpoint, RequestMethod method, RequestSpecification specification) {
             RestAssured.defaultParser = Parser.JSON;
 
