@@ -1,3 +1,14 @@
+import static com.sun.jmx.snmp.ThreadContext.contains;
+import static core.trelloConstants.TrelloOptions.BOARD_ID;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.greaterThanOrEqualTo;
+import static org.hamcrest.Matchers.notNullValue;
+import static org.hamcrest.Matchers.nullValue;
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsNot.not;
+import static org.hamcrest.text.IsEqualIgnoringCase.equalToIgnoringCase;
+
 import beans.Label;
 import beans.TrelloBoard;
 import core.LabelsApi;
@@ -8,17 +19,9 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static com.sun.jmx.snmp.ThreadContext.contains;
-import static core.trelloConstants.TrelloOptions.BOARD_ID;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
-import static org.hamcrest.core.Is.is;
-import static org.hamcrest.core.IsNot.not;
-import static org.hamcrest.text.IsEqualIgnoringCase.equalToIgnoringCase;
-
 public class TrelloTests {
 
-    @Test
+    @Test//+
     public void checkCreatedBoardExist() {
         TrelloBoard board = TrelloBoardApi.deserialize(TrelloBoardApi.with()
                 .name("My awesome board!")
@@ -36,9 +39,12 @@ public class TrelloTests {
 
     }
 
-    @Test
+    @Test//+
     public void checkBoardDeleted() {
 
+        //симпатичнее и чатабельнее бы тут выглядело TrelloBoardApi.createBoard(name=..., desc=...)
+        //или TrelloBoardApi.createBoard(new TrelloBoard().withName("Veronika's board for deleting"))
+        //хотя так тоже неплохо
         TrelloBoard boardForDeleting = TrelloBoardApi.deserialize(TrelloBoardApi.with()
                 .name("Veronika's board for deleting")
                 .desc("Description for veronika's board delete")
@@ -55,7 +61,7 @@ public class TrelloTests {
         assertThat(board.id, not(contains(boardForDeleting.id)));
     }
 
-    @Test
+    @Test//+
     public void checkBoardDescriptionCreates() {
         Response response = TrelloBoardApi.with()
                 .name("Veronika's board")
@@ -69,7 +75,7 @@ public class TrelloTests {
 
     }
 
-    @Test
+    @Test//+
     public void checkBoardDescriptionUpdates() {
         Response response = TrelloBoardApi.with()
                 .name("Veronika's board updated name")
@@ -86,7 +92,7 @@ public class TrelloTests {
 
     }
 
-    @Test
+    @Test//+
     public void checkDefaultCountOfLabels() {
 
         Response response = LabelsApi.with()
